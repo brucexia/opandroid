@@ -19,3 +19,9 @@ openpeer-android-sdk/obj
 openpeer-android-sdk/libs/armeabi
 openpeer-android-sdk/libs/armeabi-v7a
 openpeer-android-sdk/libs/x86
+OpenPeerSampleApp/bin
+OpenPeerSampleApp/gen
+OpenPeerSampleApp/obj
+OpenPeerSampleApp/libs/armeabi
+OpenPeerSampleApp/libs/armeabi-v7a
+OpenPeerSampleApp/libs/x86
