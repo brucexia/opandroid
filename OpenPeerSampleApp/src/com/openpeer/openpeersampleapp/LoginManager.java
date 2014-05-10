@@ -16,10 +16,11 @@ public class LoginManager {
 		
 		//TODO: After interception is done, we can call setup
 		stack = new OPStack();
-		stack.setup(null, null, "bojan", "bojan1", "bojan2", "bojan3", "bojan4", "bojan5", "bojan6", "bojan7");
+		stack.setup(null, null);
+//		stack.setup(null, null, "bojan", "bojan1", "bojan2", "bojan3", "bojan4", "bojan5", "bojan6", "bojan7");
 		
 		//TODO: Now we can start login procedure
-		//setAccount(OPAccount.login(null, null, null, null, null, null, null, null, null));//delegate, conversationThreadDelegate, callDelegate, namespaceGrantOuterFrameURLUponReload, namespaceGrantServiceDomain, grantID, grantSecret, lockboxServiceDomain, forceCreateNewLockboxAccount)
+		setAccount(OPAccount.login(null, null, null, null, null, null, false));//delegate, conversationThreadDelegate, callDelegate, namespaceGrantOuterFrameURLUponReload, namespaceGrantServiceDomain, grantID, grantSecret, lockboxServiceDomain, forceCreateNewLockboxAccount)
 	}
 	
 	

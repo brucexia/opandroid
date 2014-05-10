@@ -8,6 +8,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
+
 import com.openpeer.javaapi.OPStack;
 
 public class MainActivity extends Activity {
@@ -18,7 +19,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		setupFacebookButton();
-		setupWebView();
+//		setupWebView();
 	}
 
 	private void setupFacebookButton() {
@@ -41,21 +42,22 @@ public class MainActivity extends Activity {
 		WebView myWebView = (WebView) findViewById(R.id.webViewLogin);
 		WebSettings webSettings = myWebView.getSettings();
 		webSettings.setJavaScriptEnabled(true);
-		myWebView.loadUrl("http://www.google.com");
+//		myWebView.loadUrl("http://www.google.com");
 	}
 	
 	static {
-//		try {
-//		    //System.loadLibrary("mysharedlibrary");
-//		    System.loadLibrary("stlport_shared");
-//		} catch (UnsatisfiedLinkError use) {
-//		    Log.e("JNI", "WARNING: Could not load libstlport_shared.so");
-//		}
 		try {
-		    //System.loadLibrary("mysharedlibrary");
-		    System.loadLibrary("opjni");
+			System.loadLibrary("z_shared");
 		} catch (UnsatisfiedLinkError use) {
-		    Log.e("JNI", "WARNING: Could not load libopjni.so");
+			// TODO: Add error handling
+		    Log.e("JNI", "ERROR: Could not load libz_shared.so");
+		}
+
+		try {
+			System.loadLibrary("openpeer");
+		} catch (UnsatisfiedLinkError use) {
+			// TODO: Add error handling
+		    Log.e("JNI", "ERROR: Could not load libopenpeer.so");
 		}
 	}
 
