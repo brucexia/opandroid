@@ -42,21 +42,21 @@ public class MainActivity extends Activity {
 		WebView myWebView = (WebView) findViewById(R.id.webViewLogin);
 		WebSettings webSettings = myWebView.getSettings();
 		webSettings.setJavaScriptEnabled(true);
-//		myWebView.loadUrl("http://www.google.com");
+		myWebView.loadUrl("http://www.google.com");
 	}
 	
 	static {
 		try {
-			System.loadLibrary("z_shared");
+		    System.loadLibrary("z_shared");
 		} catch (UnsatisfiedLinkError use) {
-			// TODO: Add error handling
+		    // TODO: Add error handling
 		    Log.e("JNI", "ERROR: Could not load libz_shared.so");
 		}
 
 		try {
-			System.loadLibrary("openpeer");
+		    System.loadLibrary("openpeer");
 		} catch (UnsatisfiedLinkError use) {
-			// TODO: Add error handling
+		    // TODO: Add error handling
 		    Log.e("JNI", "ERROR: Could not load libopenpeer.so");
 		}
 	}
